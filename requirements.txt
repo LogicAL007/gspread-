@@ -2,5 +2,4 @@ pytest
 pandas
 python-dotenv
 requests
-json
 gspread
