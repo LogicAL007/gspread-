@@ -1,8 +1,9 @@
 pytest
-pandas 
+pandas
 dotenv
 os
 logging
 requests
 json
-datetime 
+datetime
+gspread
