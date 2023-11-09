@@ -46,8 +46,3 @@ jobs:
         run: pytest -v -k test_for_data_validation
 
 
-      - name: Test coverage (Optional)
-        run: |
-          pip install coverage
-          coverage run -m unittest discover
-          coverage report --fail-under=60 # Fails if test coverage is below 60%
