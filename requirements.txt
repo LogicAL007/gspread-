@@ -1,8 +1,6 @@
 pytest
 pandas
 python-dotenv
-logging
 requests
 json
-datetime
 gspread
