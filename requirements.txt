@@ -1,6 +1,6 @@
 pytest
 pandas
-dotenv
+python-dotenv
 os
 logging
 requests
