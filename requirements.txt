@@ -1,1 +1,8 @@
 pytest
+pandas 
+dotenv
+os
+logging
+requests
+json
+datetime 
