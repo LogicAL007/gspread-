@@ -22,7 +22,7 @@ def main():
     with open(WEATHER_API) as json_data_file:
         config = json.load(json_data_file)
 
-    payload = {'Key': config['Key'], 'q' : 'berlin', 'aqi': 'no'}
+    payload = {'Key': config['Key'], 'q' : input("Enter your location here: "), 'aqi': 'no'}
     r = requests.get("http://api.weatherapi.com/v1/current.json", params=payload)
 
     df = pass_json_into_df(r)
@@ -49,7 +49,7 @@ def pass_json_into_df(r):
       'current.wind_kph': 'wind_kph',
       'location.lat': 'latitude',
       'location.lon' : 'longitude',
-      'current.wind_dir': 'wind_directio',
+      'current.wind_dir': 'wind_direction',
       'currrent.wind_degree': 'wind_degree',
       'location.localtime_epoch': 'Localtime_epoch'
       }, inplace=True)  
