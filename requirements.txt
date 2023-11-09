@@ -1,7 +1,6 @@
 pytest
 pandas
 python-dotenv
-os
 logging
 requests
 json
