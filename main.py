@@ -49,7 +49,7 @@ def pass_json_into_df(r):
       'current.wind_kph': 'wind_kph',
       'location.lat': 'latitude',
       'location.lon' : 'longitude',
-      'current.wind_dir': 'wind_direction',
+      'current.wind_dir': 'wind_directio',
       'currrent.wind_degree': 'wind_degree',
       'location.localtime_epoch': 'Localtime_epoch'
       }, inplace=True)  
