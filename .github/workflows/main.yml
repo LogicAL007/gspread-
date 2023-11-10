@@ -19,8 +19,10 @@ jobs:
           pip install pytest pytest-cov
 
   test:
+    needs: build 
     runs-on: ${{ matrix.os }}
     strategy:
+      max-parallel: 1
       matrix:
             os: [ubuntu-latest, windows-latest]
             python-version: ["3.9", "3.10", "3.11"]
