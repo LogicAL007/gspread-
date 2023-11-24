@@ -22,7 +22,7 @@ jobs:
     needs: build 
     runs-on: ${{ matrix.os }}
     strategy:
-      max-parallel: 4
+      max-parallel: 1
       matrix:
             os: [ubuntu-latest, windows-latest]
             python-version: ["3.9", "3.10", "3.11"]
@@ -52,7 +52,27 @@ jobs:
   
       - name: Run test for data validation
         run: pytest -v -k test_for_data_validation
+
+
+
+ test_coverage:
+    needs: build 
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+          
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
       - name: Check test coverage
         run: pytest test_main.py --cov-config=.coveragerc --cov=main 
+
+
 
 
